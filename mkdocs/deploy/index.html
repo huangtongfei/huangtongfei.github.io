@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>部署 - htf</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">htf</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">首页</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mkdocs教程 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../start/" class="dropdown-item">入门</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">部署</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../python/" class="nav-link">Python教程</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../swift/" class="nav-link">Swift教程</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../start/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../python/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">部署</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#github" class="nav-link">安装github</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">克隆项目到本地</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mkdocs" class="nav-link">打包mkdocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#git" class="nav-link">提交代码到git</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1"><center>部署</center></h1>
+<hr />
+<h2 id="github">安装github</h2>
+<p>mkdocs需要部署到github，首先安装</p>
+<pre><code>$ pip install git
+</code></pre>
+<p>检查git是否安装成功</p>
+<pre><code>$ git --version
+git version 2.28.0
+</code></pre>
+<ul>
+<li>新建项目
+<img alt="" src="../../imgs/WX20201014-170239%402x.jpg" /></li>
+<li>选择join for free</li>
+<li>填写相应的信息
+<img alt="" src="../../imgs/WX20201014-170800%402x.jpg" /></li>
+<li>在刚创建的项目新建一个文件夹
+<img alt="" src="../../imgs/WX20201014-171108%402x.jpg" /></li>
+<li><code>Repository name</code>这一栏填写<code>xx.github.io</code>,其中<code>xx</code>是你的项目名称
+<img alt="" src="../../imgs/WX20201014-171534%402x.jpg" /></li>
+</ul>
+<h2 id="_2">克隆项目到本地</h2>
+<p>创建成功后克隆项目到本地<code>git clone xx</code>，其中<code>xx</code>是你的项目地址</p>
+<pre><code>$ git clone https://github.com/MkdocsDemo/mkdocsdemo.github.io.git
+</code></pre>
+<p><img alt="" src="../../imgs/WX20201014-172735%402x.jpg" /></p>
+<h2 id="mkdocs">打包mkdocs</h2>
+<pre><code>$ cd mkdocs-markdown
+$ mkdocs build
+INFO    -  Cleaning site directory 
+INFO    -  Building documentation to directory: /mkdocs-markdown/site 
+INFO    -  Documentation built in 0.06 seconds 
+</code></pre>
+<p>复制site下的所有文件到前面在git克隆的项目</p>
+<h2 id="git">提交代码到git</h2>
+<p>把文件添加到仓库</p>
+<pre><code>$ cd mkdocsdemo.github.io
+$ git add --all
+</code></pre>
+<p>把文件提交到仓库</p>
+<pre><code>$ git commit -m &quot;mkdocsdemo&quot;
+[master（根提交） 32c07d6] mkdocsdemo
+ 29 files changed, 8024 insertions(+)
+ create mode 100644 404.html
+ create mode 100644 about1/index.html
+ create mode 100644 about2/index.html
+ create mode 100644 css/base.css
+ create mode 100644 css/bootstrap.min.css
+ create mode 100644 css/font-awesome.min.css
+ create mode 100644 extra.css
+ create mode 100644 fonts/fontawesome-webfont.eot
+ create mode 100644 fonts/fontawesome-webfont.svg
+ create mode 100644 fonts/fontawesome-webfont.ttf
+ create mode 100644 fonts/fontawesome-webfont.woff
+ create mode 100644 fonts/fontawesome-webfont.woff2
+ create mode 100644 fonts/glyphicons-halflings-regular.eot
+ create mode 100644 fonts/glyphicons-halflings-regular.svg
+ create mode 100644 fonts/glyphicons-halflings-regular.ttf
+ create mode 100644 fonts/glyphicons-halflings-regular.woff
+ create mode 100644 fonts/glyphicons-halflings-regular.woff2
+ create mode 100644 img/favicon.ico
+ create mode 100644 img/grid.png
+ create mode 100644 index.html
+ create mode 100644 js/base.js
+ create mode 100644 js/bootstrap.min.js
+ create mode 100644 js/jquery-1.10.2.min.js
+ create mode 100644 search/lunr.js
+ create mode 100644 search/main.js
+ create mode 100644 search/search_index.json
+ create mode 100644 search/worker.js
+ create mode 100644 sitemap.xml
+ create mode 100644 sitemap.xml.gz
+</code></pre>
+<p>提交到git</p>
+<pre><code>$ git push origin master
+枚举对象: 38, 完成.
+对象计数中: 100% (38/38), 完成.
+使用 8 个线程进行压缩
+压缩对象中: 100% (36/36), 完成.
+写入对象中: 100% (38/38), 718.46 KiB | 11.78 MiB/s, 完成.
+总共 38（差异 3），复用 0（差异 0），包复用 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/MkdocsDemo/mkdocsdemo.github.io.git
+</code></pre>
+<p>大功告成，输入<code>https://mkdocsdemo.github.io</code>查看，<a href="https://mkdocsdemo.github.io">预览</a>
+<img alt="" src="../../imgs/WX20201014-174648%402x.jpg" />
+项目地址：</p>
+<pre><code>https://github.com/MkdocsDemo/mkdocsdemo.github.io
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
